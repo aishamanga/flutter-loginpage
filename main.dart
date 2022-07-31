@@ -12,86 +12,82 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         home: Scaffold(
-            body: Container(
-      child: Padding(
-        padding: const EdgeInsets.only(left: 50.0),
-        child: Column(
-          children: [
-            ListTile(
-              leading: Text("Anywhere app"),
-              title: Text("Home"),
-              trailing: Text("Join"),
+      body: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Container(
+          child: Column(children: [
+            Text(
+              "Sign Up",
+              style: TextStyle(fontSize: 30),
             ),
-            SizedBox(
-              width: 500,
-              height: 100,
+            SizedBox(height: 15),
+            Text("Create an account. it's free!"),
+            SizedBox(height: 80),
+            Align(
+              alignment: Alignment.centerLeft,
+              child: Text("Username"),
             ),
             Align(
-                alignment: Alignment.centerLeft, child: Text("START FOR FREE")),
-            SizedBox(
-              width: 500,
-              height: 30,
-            ),
-            Align(
-                alignment: Alignment.centerLeft,
-                child: Text("Create new Account")),
-            SizedBox(
-              width: 500,
-              height: 30,
-            ),
-            Align(
-                alignment: Alignment.centerLeft,
-                child: Text("Already A Member? Log in")),
-            SizedBox(
-              width: 500,
-              height: 30,
-            ),
-            Row(
-              children: [
-                SizedBox(
-                  width: 150,
-                  height: 100,
-                  child: TextField(),
+              alignment: Alignment.centerLeft,
+              child: SizedBox(
+                width: 500,
+                child: TextField(
+                  decoration: InputDecoration(border: OutlineInputBorder()),
                 ),
-                SizedBox(
-                  width: 90,
-                  height: 100,
-                ),
-                SizedBox(
-                  width: 150,
-                  height: 100,
-                  child: TextField(),
-                )
-              ],
+              ),
             ),
             Align(
-                alignment: Alignment.centerLeft,
-                child: SizedBox(
-                  width: 400,
-                  height: 100,
-                  child: TextField(),
-                )),
-            Align(
-                alignment: Alignment.centerLeft,
-                child: SizedBox(
-                  width: 400,
-                  height: 100,
-                  child: TextField(),
-                )),
-            Row(
-              children: [
-                ElevatedButton(onPressed: () {}, child: Text("change method")),
-                SizedBox(
-                  width: 90,
-                  height: 100,
-                ),
-                ElevatedButton(onPressed: () {}, child: Text("create account"))
-              ],
+              alignment: Alignment.centerLeft,
+              child: Text("Email"),
             ),
-            Align(alignment: Alignment.centerRight, child: FlutterLogo())
-          ],
+            Align(
+              alignment: Alignment.centerLeft,
+              child: SizedBox(
+                width: 500,
+                child: TextField(
+                  decoration: InputDecoration(border: OutlineInputBorder()),
+                ),
+              ),
+            ),
+            Align(
+              alignment: Alignment.centerLeft,
+              child: Text("Password"),
+            ),
+            Align(
+              alignment: Alignment.centerLeft,
+              child: SizedBox(
+                width: 500,
+                child: TextField(
+                  decoration: InputDecoration(border: OutlineInputBorder()),
+                ),
+              ),
+            ),
+            Align(
+              alignment: Alignment.centerLeft,
+              child: Text("Confirm Password"),
+            ),
+            Align(
+              alignment: Alignment.centerLeft,
+              child: SizedBox(
+                width: 500,
+                child: TextField(
+                  decoration: InputDecoration(border: OutlineInputBorder()),
+                ),
+              ),
+            ),
+            SizedBox(height: 80),
+            ElevatedButton(
+              onPressed: () {},
+              child: Text("Sign Up"),
+              style: ElevatedButton.styleFrom(
+                  primary: Colors.red,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30))),
+            ),
+            Text("Already have an account? Log In"),
+          ]),
         ),
       ),
-    )));
+    ));
   }
 }
