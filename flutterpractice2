@@ -1,0 +1,146 @@
+import 'dart:html';
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Container(
+            color: Colors.grey,
+            child: Column(
+              children: [
+                Row(children: [
+                  FlutterLogo(),
+                  FlutterLogo(),
+                ]),
+                Row(
+                  children: [
+                    Column(
+                      children: [
+                        Text("Mon"),
+                        Text("12"),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Text("Tue"),
+                        Text("13"),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Text("Wed"),
+                        Text("14"),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Text("Thu"),
+                        Text("15"),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Text("Fri"),
+                        Text("16"),
+                      ],
+                    ),
+                  ],
+                ),
+                Row(
+                  children: [
+                    Text("Activity"),
+                    Text("See all"),
+                  ],
+                ),
+                Column(
+                  children: [
+                    Row(
+                      children: [
+                        Container(
+                          padding: EdgeInsets.all(30),
+                          width: 200,
+                          height: 200,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(16),
+                            color: Colors.amber,
+                          ),
+                          child: Column(
+                            children: [
+                              buildBackgroundCard(),
+                            ],
+                          ),
+                        ),
+                        Column(
+                          children: [
+                            Text("Water the plants"),
+                            Text("2 out of 5 completed"),
+                          ],
+                        )
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        Column(
+                          children: [
+                            Text("Drink a glass of water"),
+                            Text("4 out of 5 completed"),
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            Text("Read novel books"),
+                            Text("1 out of 5 completed"),
+                          ],
+                        )
+                      ],
+                    ),
+                  ],
+                ),
+                BottomNavigationBar(items: [
+                  BottomNavigationBarItem(
+                      icon: Icon(Icons.home), label: "Home"),
+                  BottomNavigationBarItem(
+                      icon: Icon(Icons.business), label: "Business"),
+                  BottomNavigationBarItem(
+                      icon: Icon(Icons.school), label: "School")
+                ])
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget buildBackgroundCard() {
+    return Column(
+      children: [
+        Text(
+          "Writing Assignments",
+          style: TextStyle(
+              fontSize: 15, fontWeight: FontWeight.bold, color: Colors.white),
+        ),
+        SizedBox(
+          height: 10,
+        ),
+        Text("3 out of 5 Completed",
+            style: TextStyle(fontSize: 10, color: Colors.white)),
+      ],
+    );
+  }
+}
+
+//https://dribbble.com/shots/15089012--Apps-Planning-Concept/attachments/6820032?mode=media
+
